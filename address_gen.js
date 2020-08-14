@@ -16,7 +16,7 @@ try{
             console.error('Invalid number.')
             return;
         }
-        console.log("\nEnter your mnemonic phrase:")
+        console.log("\nEnter your mnemonic phrase (*note*, nothing will show up when typing as to protect your privacy):")
         prompt.get([{
             name: 'mnemonic',
             hidden: true
@@ -62,7 +62,7 @@ function generateAddresses(mnemonicIn, num){
     let mnemonic = mnemonicIn.trim();
 
     if (bip39.validateMnemonic(mnemonic) == false) {
-        console.log("\n\n[ERROR] Your mnemonic is bad. You might have chosen random 24-word mnemonics, which you can't do due to checksums. Use a proper BIP-39 mnemonic generation tool, such as https://github.com/ava-labs/AVAX-mnemonic-generator.\n");
+        console.log("\n\n[ERROR] Your mnemonic is invalid. Did you generate it manually? Use a proper BIP-39 mnemonic generation tool, such as the one in this repository.");
         process.exit();
     }
 
@@ -80,7 +80,7 @@ function generateAddresses(mnemonicIn, num){
         let privateKeyHEX = key.privateKey.toString('hex');
         let privateKeyBuffer = new Buffer(privateKeyHEX, 'hex');
         let addr = keychain.importKey(privateKeyBuffer);
-        let keypair = keychain.getKey(addr)
+        let keypair = keychain.getKey(addr);
         // console.log(keypair.getPublicKey().toString('hex'));
         return keypair.getAddressString();
     });
