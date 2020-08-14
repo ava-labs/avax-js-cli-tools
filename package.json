@@ -1,0 +1,25 @@
+{
+  "name": "avax-addresses",
+  "version": "1.0.0",
+  "description": "Lists derived addresses from the given mnemonic phrase.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ava-labs/AVAX-address-generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ava-labs/AVAX-address-generator/issues"
+  },
+  "homepage": "https://github.com/ava-labs/AVAX-address-generator#readme",
+  "dependencies": {
+    "avalanche": "^2.3.0",
+    "bip39": "^3.0.2",
+    "hdkey": "^2.0.1",
+    "prompt": "^1.0.0"
+  }
+}
