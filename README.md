@@ -9,7 +9,9 @@ NodeJs v12.14.1
 In a secure machine, type the following commands in your terminal:
 
 `git clone https://github.com/ava-labs/AVAX-address-generator.git`
+
 `cd AVAX-address-generator/`
+
 `npm install`
 
 ## Step 2 (Optional): Generating a mnemonic phrase
