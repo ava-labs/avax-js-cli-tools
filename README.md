@@ -4,18 +4,24 @@
 
 NodeJs v12.14.1
 
-## Setup
+## Step 1: Installation
 
-1) Clone the repo `git clone https://github.com/ava-labs/AVAX-address-generator.git`
-2) Install dependencies `npm install`
+In a secure machine, type the following commands in your terminal:
 
-## Running the scripts
+`git clone https://github.com/ava-labs/AVAX-address-generator.git`
+`cd AVAX-address-generator/`
+`npm install`
 
+## Step 2 (Optional): Generating a mnemonic phrase
 
-### Generating a mnemonic phrase
-Simply run `node mnemonic.js` at the root of the project.
+If you are in need of a mnemonic phrase, type the following commands in your terminal:
 
-### Deriving AVAX Addresses
-1) Run `node address_gen.js` at the root of the project.
-2) When prompt enter how many addresses you want to generate
-3) Finally enter your mnemonic phrase
+`node mnemonic.js`
+
+## Step 3: Deriving AVAX Addresses
+
+Finally, to generate your AVAX addresses, type the following commands in your terminal:
+
+`node address_gen.js`
+
+In the first prompt, enter how many addresses you want to generate. In the second prompt, paste your mnemonic phrase.
