@@ -18,6 +18,11 @@ prompt.get(['eth_key'], (err, result) => {
     try{
         let key = result.eth_key;
 
+        if(key.substr(0,2) === '0x'){
+            key = key.substr(2);
+        }
+
+
         let account = web3.eth.accounts.privateKeyToAccount(key);
         let address = account.address;
 
