@@ -1,21 +1,21 @@
 {
-  "name": "avax-addresses",
+  "name": "avax-js-cli-tools",
   "version": "1.0.0",
-  "description": "Lists derived addresses from the given mnemonic phrase.",
+  "description": "Collection of javascript scripts to use with the Avalanche network.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ava-labs/AVAX-address-generator.git"
+    "url": "git+https://github.com/ava-labs/avax-js-cli-tools.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ava-labs/AVAX-address-generator/issues"
+    "url": "https://github.com/ava-labs/avax-js-cli-tools/issues"
   },
-  "homepage": "https://github.com/ava-labs/AVAX-address-generator#readme",
+  "homepage": "https://github.com/ava-labs/avax-js-cli-tools#readme",
   "dependencies": {
     "avalanche": "^2.3.0",
     "bip39": "^3.0.2",
