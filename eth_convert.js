@@ -18,6 +18,7 @@ prompt.get(['eth_key'], (err, result) => {
     try{
         let key = result.eth_key;
 
+        // Strip the 0x if exists
         if(key.substr(0,2) === '0x'){
             key = key.substr(2);
         }
@@ -25,8 +26,6 @@ prompt.get(['eth_key'], (err, result) => {
 
         let account = web3.eth.accounts.privateKeyToAccount(key);
         let address = account.address;
-
-        let isValidAddr = Web3.utils.isAddress(address)
 
         let pkBuffer = new Buffer(key, 'hex');
 
