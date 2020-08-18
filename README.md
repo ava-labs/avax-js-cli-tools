@@ -27,3 +27,9 @@ Finally, to generate your AVAX addresses, type the following commands in your te
 `node address_gen.js`
 
 In the first prompt, enter how many addresses you want to generate. In the second prompt, paste your mnemonic phrase.
+
+
+
+## Ethereum Key to Avalanche Key
+Given an ethereum private key, it will display the corresponding avalanche address and private key.
+`node eth_convert.js`
