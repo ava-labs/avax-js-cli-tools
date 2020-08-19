@@ -1,22 +1,24 @@
 
-#Avax JS CLI Tools
+#AVAX JS CLI Tools
 A collection of scripts.
 
 ## Prerequisites
 
 NodeJs v12.14.1
 
-## Installation
+## Running
+
+### Step 1: Installation
 1) `git clone https://github.com/ava-labs/avax-js-cli-tools.git`
 2) `cd avax-js-cli-tools/`
 3) `npm install`
 
-## Generating a Mnemonic Phrase
+### Step 2: Generating a Mnemonic Phrase
 If you are in need of a mnemonic phrase, type the following commands in your terminal:
 
 `node mnemonic.js`
 
-## Deriving HD Addresses fromt a mnemonic Phrase
+### Step 3: Deriving HD Addresses fromt a mnemonic Phrase
 To generate your deterministic AVAX addresses, type the following commands in your terminal:
 
 `node address_gen.js`
