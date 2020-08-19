@@ -81,7 +81,7 @@ function generateAddresses(mnemonicIn, num){
         let privateKeyBuffer = new Buffer(privateKeyHEX, 'hex');
         let addr = keychain.importKey(privateKeyBuffer);
         let keypair = keychain.getKey(addr);
-	console.log(privateKeyHEX);
+	    // console.log(privateKeyHEX);
         // console.log(keypair.getPublicKey().toString('hex'));
         return keypair.getAddressString();
     });
