@@ -56,8 +56,8 @@ try{
 // carbon brass decorate avoid deny chaos rebuild slide write pupil pupil year account what cinnamon eight make life involve exotic start midnight sniff skin
 
 function generateAddresses(mnemonicIn, num){
-    let hrp = Avalanche.getPreferredHRP(1);
-    let keychain = new Avalanche.AVMKeyChain(hrp,'X');
+    let hrp = Avalanche.utils.getPreferredHRP(1);
+    let keychain = new Avalanche.avm.AVMKeyChain(hrp,'X');
 
     let mnemonic = mnemonicIn.trim();
 
