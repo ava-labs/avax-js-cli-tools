@@ -1,5 +1,5 @@
 
-#AVAX JS CLI Tools
+# AVAX JS CLI Tools
 A collection of scripts.
 
 ## Prerequisites
