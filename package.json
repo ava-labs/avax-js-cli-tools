@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/ava-labs/avax-js-cli-tools#readme",
   "dependencies": {
-    "avalanche": "^2.3.0",
+    "avalanche": "2.4.3",
     "bip39": "^3.0.2",
     "hdkey": "^2.0.1",
     "prompt": "^1.0.0",
