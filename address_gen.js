@@ -3,7 +3,10 @@ const HDKey = require('hdkey');
 const bip39 = require('bip39');
 const Buffer = require('buffer/').Buffer;
 const Avalanche = require('avalanche');
+const AVM = require('avalanche/dist/apis/avm');
+const Utils = require('avalanche/dist/utils')
 const AVAX_ACCOUNT_PATH = `m/44'/9000'/0'`;
+
 
 try{
     prompt.start();
@@ -56,8 +59,8 @@ try{
 // carbon brass decorate avoid deny chaos rebuild slide write pupil pupil year account what cinnamon eight make life involve exotic start midnight sniff skin
 
 function generateAddresses(mnemonicIn, num){
-    let hrp = Avalanche.getPreferredHRP(1);
-    let keychain = new Avalanche.AVMKeyChain(hrp,'X');
+    let hrp = Utils.getPreferredHRP(1);
+    let keychain = new AVM.AVMKeyChain(hrp,'X');
 
     let mnemonic = mnemonicIn.trim();
 
@@ -79,8 +82,7 @@ function generateAddresses(mnemonicIn, num){
     let addrs = keys.map((key) => {
         let privateKeyHEX = key.privateKey.toString('hex');
         let privateKeyBuffer = new Buffer(privateKeyHEX, 'hex');
-        let addr = keychain.importKey(privateKeyBuffer);
-        let keypair = keychain.getKey(addr);
+        let keypair = keychain.importKey(privateKeyBuffer);
 	    // console.log(privateKeyHEX);
         // console.log(keypair.getPublicKey().toString('hex'));
         return keypair.getAddressString();
