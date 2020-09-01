@@ -2,7 +2,6 @@ let prompt = require('prompt');
 const HDKey = require('hdkey');
 const bip39 = require('bip39');
 const Buffer = require('buffer/').Buffer;
-const Avalanche = require('avalanche');
 const AVM = require('avalanche/dist/apis/avm');
 const Utils = require('avalanche/dist/utils')
 const AVAX_ACCOUNT_PATH = `m/44'/9000'/0'`;
