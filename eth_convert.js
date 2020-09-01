@@ -1,10 +1,12 @@
 // Given an ethereum private key, convert it to avalanche priavte key and display address
 var Web3 = require('web3');
 const Buffer = require('buffer/').Buffer;
-const Avalanche = require('avalanche');
+const Utils = require('avalanche/dist/utils')
+const AVM = require('avalanche/dist/apis/avm');
 
-let hrp = Avalanche.getPreferredHRP(1);
-let keychain = new Avalanche.AVMKeyChain(hrp,'X');
+
+let hrp = Utils.getPreferredHRP(1);
+let keychain = new AVM.AVMKeyChain(hrp,'X');
 
 
 var web3 = new Web3(Web3.givenProvider);
@@ -32,8 +34,7 @@ prompt.get(['eth_key'], (err, result) => {
         console.log('\n---------------------------\n');
 
         console.log("ETH Address:\t",address)
-        let addr = keychain.importKey(pkBuffer);
-        let avaxKey = keychain.getKey(addr);
+        let avaxKey = keychain.importKey(pkBuffer);
 
         let avaxPk = avaxKey.getPrivateKeyString();
         let avaxAddr = avaxKey.getAddressString();
