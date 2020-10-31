@@ -41,9 +41,7 @@ try{
             let addresses = generateAddresses(cleanMnemonic, addrNum);
 
             console.log('\n');
-            for(let i=0; i<addresses.length; i++){
-                console.log(`${i}:\t${addresses[i]}`);
-            }
+            console.log(addresses);
             console.log();
         });
     })
@@ -82,9 +80,7 @@ function generateAddresses(mnemonicIn, num){
         let privateKeyHEX = key.privateKey.toString('hex');
         let privateKeyBuffer = new Buffer(privateKeyHEX, 'hex');
         let keypair = keychain.importKey(privateKeyBuffer);
-	    // console.log(privateKeyHEX);
-        // console.log(keypair.getPublicKey().toString('hex'));
-        return keypair.getAddressString();
+        return {"Address":keypair.getAddressString(),"PrivateKey":keypair.getPrivateKeyString()};
     });
 
     return addrs;
