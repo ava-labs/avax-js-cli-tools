@@ -4,7 +4,7 @@
 1) `git clone https://github.com/ava-labs/avax-js-cli-tools.git`
 2) `cd avax-js-cli-tools/`
 3) `npm install`
-3) `npm i g`
+3) `npm i -g`
 
 ### To generate a Mnemonic Phrase
 If you are in need of a mnemonic phrase, type the following command in your terminal:

@@ -18,6 +18,7 @@ const numIntAddrs = {
 const isMnemonicProvided = {
     description: 'Do you want to provide a mnemonic phrase? (Y or N) (if not, one will be generated for you)',
     before: isY,
+    required: true,
     conform: isYorN,
     message: 'Input must be Y or N'
 }
@@ -26,6 +27,7 @@ const mnemonic = {
     description: "Enter your mnemonic phrase (*note*, your mnemonic will be masked to protect your privacy):\n",
     hidden: true,
     replace: '*',
+    required: true,
     message: 'Your mnemonic is invalid. Please provide a valid 24 word mnemonic generated from a BIP-39 mnemonic generation tool',
     ask: function () {
         return prompt.history('isMnemonicProvided').value;

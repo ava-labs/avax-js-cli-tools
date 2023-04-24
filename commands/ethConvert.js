@@ -9,7 +9,7 @@ prompt.colors = false;
 
 
 const ethKey = {
-    description: "\"Enter your ethereum private key (HEX):\"",
+    description: "Enter your ethereum private key (HEX):",
     message: 'Please provide a valid eth privateKey',
 }
 

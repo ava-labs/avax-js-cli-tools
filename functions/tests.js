@@ -79,7 +79,7 @@ describe("Test Address Generation Functions", function () {
         });
     });
 
-    describe('ethKeyToAvax', function () {
+    describe('ethKeyToAvax()', function () {
         it('should convert an Ethereum private key to an Avalanche private key and address', function () {
             const ethPrivKey = '9fcd0a4d4fae0470f0f0121f66ec1d6bda24260d70cf3ce34dbf2d4e4f4d4f03';
             const expectedAvaxPrivKey = 'PrivateKey-2DNuEGnNo4h7XvuZ3xjWMcpXqCK2y8hyfH3QsCELT64mLxTq26';

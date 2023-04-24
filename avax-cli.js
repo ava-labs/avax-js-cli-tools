@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 const {logCliOptions} = require("./functions/loggingHelpers");
-const {convertEthKeytoAvax} = require("./commands/eth_convert.js");
-const {generateAddresses} = require("./commands/address_gen/address_gen.js");
+const {convertEthKeytoAvax} = require("./commands/ethConvert.js");
+const {generateAddresses} = require("./commands/addressGeneration/addressGeneration.js");
 const {generateAndLogMnemonic} = require("./commands/mnemonic.js");
 
 const cliCommandsOptions = {
