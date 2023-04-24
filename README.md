@@ -1,30 +1,27 @@
+# AVAX JS CLI Tool
 
-# AVAX JS CLI Tools
-A collection of scripts.
-
-## Prerequisites
-
-NodeJs v12.14.1
-
-## Running
-
-### Step 1: Installation
+### To install the cli tool globally
 1) `git clone https://github.com/ava-labs/avax-js-cli-tools.git`
 2) `cd avax-js-cli-tools/`
 3) `npm install`
+3) `npm i g`
 
-### Step 2: Generating a Mnemonic Phrase
-If you are in need of a mnemonic phrase, type the following commands in your terminal:
+### To generate a Mnemonic Phrase
+If you are in need of a mnemonic phrase, type the following command in your terminal:
 
-`node mnemonic.js`
+`avax-cli generate-mnemonic`
 
-### Step 3: Deriving HD Addresses fromt a mnemonic Phrase
-To generate your deterministic AVAX addresses, type the following commands in your terminal:
+### To generate External and Internal HD Addresses:
+To generate your deterministic AVAX addresses, type the following command in your terminal:
 
-`node address_gen.js`
+`avax-cli generate-addresses`
 
-In the first prompt, enter how many addresses you want to generate. In the second prompt, paste your mnemonic phrase.
+* In the first prompt, enter how many external addresses you want to generate. 
+* In the second prompt, enter how many internal addresses you want to generate. 
+* In the third prompt, specify if you wish to provide a mnemonic (if not, one will be generated for you)
+* (If you wish to provide a mnemonic) In the forth prompt, paste your mnemonic phrase.
 
-## Ethereum Key to Avalanche Key
+### To convert an Ethereum Key to an Avalanche Key and Address
 Given an ethereum private key, it will display the corresponding avalanche address and private key.
-`node eth_convert.js`
+
+`avax-cli convert-eth-key`

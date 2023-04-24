@@ -1,14 +1,17 @@
 {
-  "name": "avax-js-cli-tools",
+  "name": "avax-cli",
   "version": "1.0.0",
-  "description": "Collection of javascript scripts to use with the Avalanche network.",
-  "main": "index.js",
+  "description": "Cli tool for use with the Avalanche network.",
+  "main": "avax-cli.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha functions/tests.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ava-labs/avax-js-cli-tools.git"
+  },
+  "bin": {
+    "avax-cli": "./avax-cli.js"
   },
   "author": "",
   "license": "ISC",
@@ -17,10 +20,14 @@
   },
   "homepage": "https://github.com/ava-labs/avax-js-cli-tools#readme",
   "dependencies": {
-    "avalanche": "2.4.3",
-    "bip39": "^3.0.2",
-    "hdkey": "^2.0.1",
-    "prompt": "^1.0.0",
-    "web3": "^1.2.11"
+    "avalanche": "^3.16.0",
+    "bip39": "^3.1.0",
+    "chai": "^4.3.7",
+    "g": "^2.0.1",
+    "hdkey": "^2.1.0",
+    "mocha": "^10.2.0",
+    "prompt": "^1.3.0",
+    "sinon": "^15.0.3",
+    "web3": "^1.9.0"
   }
 }
